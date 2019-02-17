@@ -7,23 +7,45 @@ class ViewController: UIViewController {
     var arrayOfBlocks : Array<UIImageView>;
     var numOfBlocks : Int;
     
+    var playerIcon : UIImageView!;
+    
+    var animator: UIDynamicAnimator!
+    var gravity: UIGravityBehavior!
+    var collision: UICollisionBehavior!
+    
+    var started : Bool
+    
     required init?(coder aDecoder: NSCoder){
         arrayOfBlocks = []
         numOfBlocks = 0
+        started = false;
         super.init(coder: aDecoder);
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        assignbackground()
         // Do any additional setup after loading the view, typically from a nib.
         let block1 : UIButton = self.view.viewWithTag(100) as! UIButton;
         block1.backgroundColor=UIColor.brown;
-        let playerIcon : UIImageView = self.view.viewWithTag(200) as! UIImageView;
+        playerIcon = self.view.viewWithTag(200) as! UIImageView;
         playerIcon.image = UIImage(named: "girl1.png");
         let exitIcon : UIImageView = self.view.viewWithTag(300) as! UIImageView;
         exitIcon.image = UIImage(named: "exit.png");
+    }
+    
+    func assignbackground(){
+        let background = UIImage(named: "background.jpg")
         
+        var imageView : UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
     }
     
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
@@ -48,6 +70,7 @@ class ViewController: UIViewController {
         self.view.addSubview(blockImage)
     }
     @IBAction func moveLeft(_ sender: Any) {
+        if(!started){return;}
         let playerIcon : UIImageView = self.view.viewWithTag(200) as! UIImageView;
         UIView.animate(withDuration: 0.1, delay: 0.025, options: [],
                        animations: {
@@ -57,6 +80,7 @@ class ViewController: UIViewController {
         )
     }
     @IBAction func moveRight(_ sender: Any) {
+        if(!started){return;}
         let playerIcon : UIImageView = self.view.viewWithTag(200) as! UIImageView;
         UIView.animate(withDuration: 0.1, delay: 0.025, options: [],
                        animations: {
@@ -66,13 +90,31 @@ class ViewController: UIViewController {
         )
     }
     @IBAction func jumpUp(_ sender: Any) {
+        if(!started){return;}
         let playerIcon : UIImageView = self.view.viewWithTag(200) as! UIImageView;
         UIView.animate(withDuration: 0.2, delay: 0.025, options: [],
                        animations: {
-                        playerIcon.center.y -= playerIcon.bounds.width * 2
+                        playerIcon.center.y -= playerIcon.bounds.width * 3
         },
                        completion: nil
         )
+        animator = UIDynamicAnimator(referenceView: view)
+        gravity = UIGravityBehavior(items: [playerIcon])
+        animator.addBehavior(gravity)
+        collision = UICollisionBehavior(items: [playerIcon])
+        collision.translatesReferenceBoundsIntoBoundary = true
+        animator.addBehavior(collision)
+    }
+    
+    @IBAction func startTrial(){
+        started = true
+        //NSLog("!")
+        animator = UIDynamicAnimator(referenceView: view)
+        gravity = UIGravityBehavior(items: [playerIcon])
+        animator.addBehavior(gravity)
+        collision = UICollisionBehavior(items: [playerIcon])
+        collision.translatesReferenceBoundsIntoBoundary = true
+        animator.addBehavior(collision)
     }
 }
 

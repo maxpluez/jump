@@ -14,6 +14,7 @@
 		508A44D22219DD5D001C562B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508A44D02219DD5D001C562B /* LaunchScreen.storyboard */; };
 		508A44DA221A0D3B001C562B /* girl1.png in Resources */ = {isa = PBXBuildFile; fileRef = 508A44D9221A0D3A001C562B /* girl1.png */; };
 		508A44DC221A0DE1001C562B /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 508A44DB221A0DE1001C562B /* exit.png */; };
+		508A44DE221A115B001C562B /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 508A44DD221A115A001C562B /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		508A44D32219DD5D001C562B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508A44D9221A0D3A001C562B /* girl1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl1.png; sourceTree = "<group>"; };
 		508A44DB221A0DE1001C562B /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
+		508A44DD221A115A001C562B /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				508A44CB2219DD5C001C562B /* Main.storyboard */,
 				508A44D9221A0D3A001C562B /* girl1.png */,
 				508A44DB221A0DE1001C562B /* exit.png */,
+				508A44DD221A115A001C562B /* background.jpg */,
 				508A44CE2219DD5D001C562B /* Assets.xcassets */,
 				508A44D02219DD5D001C562B /* LaunchScreen.storyboard */,
 				508A44D32219DD5D001C562B /* Info.plist */,
@@ -131,6 +134,7 @@
 				508A44D22219DD5D001C562B /* LaunchScreen.storyboard in Resources */,
 				508A44DC221A0DE1001C562B /* exit.png in Resources */,
 				508A44CF2219DD5D001C562B /* Assets.xcassets in Resources */,
+				508A44DE221A115B001C562B /* background.jpg in Resources */,
 				508A44CD2219DD5C001C562B /* Main.storyboard in Resources */,
 				508A44DA221A0D3B001C562B /* girl1.png in Resources */,
 			);
