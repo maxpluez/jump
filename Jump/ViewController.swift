@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         blockImage.isUserInteractionEnabled = true;
         blockImage.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handlePan(recognizer:))))
         blockImage.isUserInteractionEnabled = true;
+        //blockImage.restorationIdentifier = "block"+String(numOfBlocks)
         numOfBlocks += 1
         arrayOfBlocks.append(blockImage)
         self.view.addSubview(blockImage)
@@ -78,6 +79,18 @@ class ViewController: UIViewController {
         },
                        completion: nil
         )
+        /*
+        animator = UIDynamicAnimator(referenceView: view)
+        gravity = UIGravityBehavior(items: [playerIcon])
+        animator.addBehavior(gravity)
+        var arrayOfCol : Array<UIImageView> = [playerIcon]
+        for e in arrayOfBlocks{
+            arrayOfCol.append(e)
+        }
+        collision = UICollisionBehavior(items: arrayOfCol)
+        collision.translatesReferenceBoundsIntoBoundary = true
+        animator.addBehavior(collision)
+ */
     }
     @IBAction func moveRight(_ sender: Any) {
         if(!started){return;}
@@ -88,6 +101,18 @@ class ViewController: UIViewController {
         },
                        completion: nil
         )
+        /*
+        animator = UIDynamicAnimator(referenceView: view)
+        gravity = UIGravityBehavior(items: [playerIcon])
+        animator.addBehavior(gravity)
+        var arrayOfCol : Array<UIImageView> = [playerIcon]
+        for e in arrayOfBlocks{
+            arrayOfCol.append(e)
+        }
+        collision = UICollisionBehavior(items: arrayOfCol)
+        collision.translatesReferenceBoundsIntoBoundary = true
+        animator.addBehavior(collision)
+ */
     }
     @IBAction func jumpUp(_ sender: Any) {
         if(!started){return;}
@@ -101,20 +126,29 @@ class ViewController: UIViewController {
         animator = UIDynamicAnimator(referenceView: view)
         gravity = UIGravityBehavior(items: [playerIcon])
         animator.addBehavior(gravity)
-        collision = UICollisionBehavior(items: [playerIcon])
+        var arrayOfCol : Array<UIImageView> = [playerIcon]
+        for e in arrayOfBlocks{
+            arrayOfCol.append(e)
+        }
+        collision = UICollisionBehavior(items: arrayOfCol)
         collision.translatesReferenceBoundsIntoBoundary = true
         animator.addBehavior(collision)
     }
     
     @IBAction func startTrial(){
-        started = true
-        //NSLog("!")
-        animator = UIDynamicAnimator(referenceView: view)
-        gravity = UIGravityBehavior(items: [playerIcon])
-        animator.addBehavior(gravity)
-        collision = UICollisionBehavior(items: [playerIcon])
-        collision.translatesReferenceBoundsIntoBoundary = true
-        animator.addBehavior(collision)
+        if(!started){
+            started = true
+            animator = UIDynamicAnimator(referenceView: view)
+            gravity = UIGravityBehavior(items: [playerIcon])
+            animator.addBehavior(gravity)
+            var arrayOfCol : Array<UIImageView> = [playerIcon]
+            for e in arrayOfBlocks{
+                arrayOfCol.append(e)
+            }
+            collision = UICollisionBehavior(items: arrayOfCol)
+            collision.translatesReferenceBoundsIntoBoundary = true
+            animator.addBehavior(collision)
+        }
     }
 }
 
