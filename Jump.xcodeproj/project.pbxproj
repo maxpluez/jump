@@ -12,6 +12,8 @@
 		508A44CD2219DD5C001C562B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508A44CB2219DD5C001C562B /* Main.storyboard */; };
 		508A44CF2219DD5D001C562B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508A44CE2219DD5D001C562B /* Assets.xcassets */; };
 		508A44D22219DD5D001C562B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508A44D02219DD5D001C562B /* LaunchScreen.storyboard */; };
+		508A44DA221A0D3B001C562B /* girl1.png in Resources */ = {isa = PBXBuildFile; fileRef = 508A44D9221A0D3A001C562B /* girl1.png */; };
+		508A44DC221A0DE1001C562B /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 508A44DB221A0DE1001C562B /* exit.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		508A44CE2219DD5D001C562B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		508A44D12219DD5D001C562B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		508A44D32219DD5D001C562B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		508A44D9221A0D3A001C562B /* girl1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl1.png; sourceTree = "<group>"; };
+		508A44DB221A0DE1001C562B /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				508A44C72219DD5C001C562B /* AppDelegate.swift */,
 				508A44C92219DD5C001C562B /* ViewController.swift */,
 				508A44CB2219DD5C001C562B /* Main.storyboard */,
+				508A44D9221A0D3A001C562B /* girl1.png */,
+				508A44DB221A0DE1001C562B /* exit.png */,
 				508A44CE2219DD5D001C562B /* Assets.xcassets */,
 				508A44D02219DD5D001C562B /* LaunchScreen.storyboard */,
 				508A44D32219DD5D001C562B /* Info.plist */,
@@ -123,8 +129,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				508A44D22219DD5D001C562B /* LaunchScreen.storyboard in Resources */,
+				508A44DC221A0DE1001C562B /* exit.png in Resources */,
 				508A44CF2219DD5D001C562B /* Assets.xcassets in Resources */,
 				508A44CD2219DD5C001C562B /* Main.storyboard in Resources */,
+				508A44DA221A0D3B001C562B /* girl1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

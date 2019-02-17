@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let block1 : UIButton = self.view.viewWithTag(100) as! UIButton;
         block1.backgroundColor=UIColor.brown;
+        let playerIcon : UIImageView = self.view.viewWithTag(200) as! UIImageView;
+        playerIcon.image = UIImage(named: "girl1.png");
+        let exitIcon : UIImageView = self.view.viewWithTag(300) as! UIImageView;
+        exitIcon.image = UIImage(named: "exit.png");
     }
     
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
