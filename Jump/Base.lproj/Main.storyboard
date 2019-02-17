@@ -22,6 +22,9 @@
                                 <rect key="frame" x="6" y="345" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="LEFT"/>
+                                <connections>
+                                    <action selector="moveLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NnD-nc-1o8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8b-6W-76n">
                                 <rect key="frame" x="54" y="345" width="47" height="30"/>
@@ -32,11 +35,17 @@
                                 <rect key="frame" x="109" y="345" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="RIGHT"/>
+                                <connections>
+                                    <action selector="moveRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="peE-rP-S7N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aV-a0-CZx">
                                 <rect key="frame" x="62" y="325" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UP"/>
+                                <connections>
+                                    <action selector="jumpUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="30N-2A-nre"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiU-1D-B09">
                                 <rect key="frame" x="283" y="325" width="100" height="30"/>

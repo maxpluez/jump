@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         playerIcon.image = UIImage(named: "girl1.png");
         let exitIcon : UIImageView = self.view.viewWithTag(300) as! UIImageView;
         exitIcon.image = UIImage(named: "exit.png");
+        
     }
     
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
@@ -45,6 +46,33 @@ class ViewController: UIViewController {
         numOfBlocks += 1
         arrayOfBlocks.append(blockImage)
         self.view.addSubview(blockImage)
+    }
+    @IBAction func moveLeft(_ sender: Any) {
+        let playerIcon : UIImageView = self.view.viewWithTag(200) as! UIImageView;
+        UIView.animate(withDuration: 0.1, delay: 0.025, options: [],
+                       animations: {
+                        playerIcon.center.x -= playerIcon.bounds.width * 1
+        },
+                       completion: nil
+        )
+    }
+    @IBAction func moveRight(_ sender: Any) {
+        let playerIcon : UIImageView = self.view.viewWithTag(200) as! UIImageView;
+        UIView.animate(withDuration: 0.1, delay: 0.025, options: [],
+                       animations: {
+                        playerIcon.center.x += playerIcon.bounds.width * 1
+        },
+                       completion: nil
+        )
+    }
+    @IBAction func jumpUp(_ sender: Any) {
+        let playerIcon : UIImageView = self.view.viewWithTag(200) as! UIImageView;
+        UIView.animate(withDuration: 0.2, delay: 0.025, options: [],
+                       animations: {
+                        playerIcon.center.y -= playerIcon.bounds.width * 2
+        },
+                       completion: nil
+        )
     }
 }
 
